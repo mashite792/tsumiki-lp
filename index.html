@@ -55,6 +55,11 @@ a { color: inherit; }
 .hero .eyebrow { display: inline-block; font-family: var(--font-round); font-weight: 700; font-size: 14px; background: #fff; border: 2px solid var(--ink); border-radius: 999px; padding: 2px 14px; margin-bottom: 16px; }
 .hero h1 { font-family: var(--font-round); font-weight: 800; font-size: clamp(32px, 5.4vw, 52px); line-height: 1.35; margin: 0 0 16px; text-wrap: balance; }
 .hero h1 em { font-style: normal; color: var(--orange); }
+.hero h1 .nb { display: inline-block; } /* 「みよう。」の途中で改行させない */
+@media (max-width: 600px) {
+  .top-bar .btn-s { display: none; } /* スマホではヒーローの申込ボタンがすぐ下にあるため省略 */
+  .logo { font-size: 18px; white-space: nowrap; }
+}
 .hero p { margin: 0 0 28px; color: var(--muted); }
 .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
 .hero-cta small { font-size: 13px; color: var(--muted); }
@@ -172,7 +177,7 @@ footer strong { color: #fff; font-family: var(--font-round); font-size: 16px; }
     <div class="hero">
       <div>
         <span class="eyebrow">小学1〜6年生／福岡市早良区</span>
-        <h1>好きなゲームを、<br><em>自分でつくって</em>みよう。</h1>
+        <h1>好きなゲームを、<br><em class="nb">自分でつくって</em><span class="nb">みよう。</span></h1>
         <p>ブロックを組み合わせるだけで、キャラクターが動き出します。パソコンに触ったことがなくても大丈夫。毎週土曜に、60分の無料体験会を開いています。</p>
         <div class="hero-cta">
           <a class="btn btn-l" href="#entry">無料体験会に申し込む</a>
